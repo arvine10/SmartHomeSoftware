@@ -1,0 +1,360 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+}
+
+/* /////////////////////////////////////////// */
+
+
+
+/* /////////////////////////////////////////// */
+
+/* FloorPlan:  */
+
+.floorplan{
+    margin: 6vh 4vw;
+    position: relative;
+
+}
+
+/* /////////////////////////////////////////// */
+
+/* HouseContainer  */
+
+.houseContainer{
+    display: inline-block;
+    width: 100%; 
+    height: 100%;
+}
+
+/* /////////////////////////////////////////// */
+
+ /* House:  */
+
+.house{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "bed1 bed2 bed3"
+    " bath1 bath2 gdoor1"
+    "liveRoom kitchen gdoor2";
+}
+
+@media (max-width: 600px){
+    .house{
+        /* border: 4px solid black; */
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr;
+       
+        grid-template-areas: 
+        "bed1"
+         "bed2" 
+         "bed3"
+        " bath1" 
+        "bath2" 
+        "gdoor1"
+        "liveRoom" 
+        "kitchen" 
+        "gdoor2";
+    }
+
+}
+
+
+/* /////////////////////////////////////////// */
+
+/* Roooms:  */
+
+
+.room h1{
+    border-bottom: 1px solid black;
+    text-align: center;
+    background-color: #DC143C;
+    color: white;
+    font-weight: bold;
+    font-size: 6vh;
+}
+.room{
+    border-radius: 4vh;
+    margin: 3vh 1vw;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    transition: 0.5s;
+    height: 500px;
+}
+
+
+
+.light{
+    height: 100%;
+    width: 100%;
+}
+
+.lights{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+/* /////////////////////////////////////////// */
+
+/* BedRoom 1: */
+
+.bedroom1{
+    grid-area: bed1;
+    border: 2px solid black;
+    overflow:auto;
+}
+
+
+
+
+/* /////////////////////////////////////////// */
+
+/* BedRoom 2 */
+
+.bedroom2{
+    grid-area: bed2;
+    border: 2px solid black;
+    /* height: 1fr; */
+    overflow:auto;
+}
+
+
+
+
+/* /////////////////////////////////////////// */
+/* Bed Room 3 */
+.bedroom3{
+    grid-area: bed3;
+    border: 2px solid black;
+    overflow:auto;
+}
+
+
+
+
+/* /////////////////////////////////////////// */
+
+/* Bathroom 1:  */
+.bathroom1{
+    grid-area: bath1;
+    border: 2px solid black;
+}
+
+
+
+/* /////////////////////////////////////////// */
+
+/* Bathroom 2:  */
+
+.bathroom2{
+    grid-area: bath2;
+    border: 2px solid black;
+}
+
+
+/* /////////////////////////////////////////// */
+
+/* Living Room:  */
+.livingRoom{
+    grid-area: liveRoom;
+    border: 2px solid black;
+}
+
+
+
+
+/* /////////////////////////////////////////// */
+/* kitchen */
+
+.kitchen{
+    grid-area: kitchen;
+    border: 2px solid black;
+}
+
+
+
+/* /////////////////////////////////////////// */
+
+/* garage :  */
+
+.gdoor1{
+    grid-area: gdoor1;
+    
+}
+
+
+/* /////////////////////////////////////////// */
+
+
+.btnContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+.btn__style{
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+    position: relative;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+    /* get rid of margin */
+    margin: 20px;
+    /* get rid of margin */
+
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border: 1px transparent;
+    cursor: pointer;
+    
+    
+}
+
+.btn__style:hover{
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn__style:active{
+    background-color: #DC143C;
+    border: 1px solid #DC143C;
+
+}
+
+.btn__style span{
+    position: absolute;
+    left: -1%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    top: -3%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.btn__style .window{
+    background: url("./images/window.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.btn__style .lamp{
+    background: url("./images/lamp.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .tv{
+    background: url("./images/tv.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .lights{
+    background: url("./images/lightBulb.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .door{
+    background: url("./images/door.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .washingmachine{
+    background: url("./images/washingmachine.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .fan{
+    background: url("./images/fan.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .dryer{
+    background: url("./images/dryer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.btn__style .faucet{
+    background: url("./images/faucet.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .shower{
+    background: url("./images/shower.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.btn__style .stove{
+    background: url("./images/stove.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .oven{
+    background: url("./images/oven.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .microwave{
+    background: url("./images/microwave2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__style .fridge{
+    background: url("./images/fridge.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.btn__style .dishwasher{
+    background: url("./images/dishwasher.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

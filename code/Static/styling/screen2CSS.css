@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#monthly {
+    background-color: rgb(111, 49, 168);
+    /* background-color: rgb(73, 72, 72); */
+    padding-bottom: 75px;
+}
+
+body{
+    background-color: rgb(111, 49, 168);
+}
+
+main{
+    width: 95%;
+    margin: 40px auto;
+}
+
+/*//////////////////////////////
+////////// THE GRAPH ///////////
+//////////////////////////////*/
+
+#monthlyDate {
+    /* background-color: rgb(209, 84, 105); */
+    width: 9vw;
+    height: 45vh;
+    margin: 8px;
+}
+
+#totalDate {
+    margin-left: 8px /* figure out how much margin left is needed to alighn with monthly date */
+}
+
+h2 {
+    color: white;
+    font-size: xx-large;
+}
+
+.graphAndLegend {
+    display: flex; /*so the graph and the legend will appear side by side of each other */
+    flex: wrap;
+    justify-content: center;
+}
+
+.arrow {
+    height: 50px;
+    width: 50px;
+    margin-top: 200px;
+    font-weight: bold;
+}
+
+.graph {
+    background-color: white;
+    width: 900px; /* changed the height and width of the line graph*/
+    height: 500px;
+    margin: 8px; /*adds space in between the the graph and the arrows by adding white space outside of each card */
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.301);
+}
+
+/*//////////////////////////////
+/////////  THE LEGEND //////////
+//////////////////////////////*/
+.legend {
+    background-color: white;
+    width: 300px; /* changed the height and width of the legend*/
+    height: 130px;
+    margin: 8px; /*adds space in between the legend and the right arrow */
+   
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* adds the illusion that the legend card is floating */
+}
+.pwclegendflex {
+    display: flex; /* makes the graph div and the legend side by side of each other */
+    flex: wrap; /* makes it to where the legend will be under the graph if the screen minimizes */
+    margin: 10px;
+    justify-content: center; /*puts the legend labels and boxes in the center of the legend */
+}
+
+.pwclegend {
+    font-size: large; /* styles the "power usage", "Water usage", and "cost" labels in the legend*/
+    font-weight: bold;
+
+}
+.legendBox { /* styles the orange, blue, and red boxes in the legend */
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.pBox{ /*styles the power usage box */
+    color: orange;
+    background-color: orange;
+    margin-top: 15px; /* adds space between the top of the legend card and the power/yellow box */
+}
+
+.pLabel { 
+    margin-top: 15px; /* adds space between the top of the legend card and the "Power Usage" label */
+}
+
+.wBox{ /*styles the water usage box */
+    color: lightblue;
+    background-color: lightblue;
+}
+
+.cBox { /*styles the cost box */
+    color: red;
+    background-color: red;
+    margin-bottom: 15px; /* adds space between the bottom of the legend card and the cost/red box */
+} 
+
+.cLabel { 
+    margin-bottom: 15px; /*adds space between the bottom of the legend card and the "Cost" label */
+}
+
+/*//////////////////////////////
+////////// THE AD //////////////
+//////////////////////////////*/
+#ad {
+    background-color: white;
+    height: 200px;
+    width: 300px; /* same as legend */
+    margin-top: 75px;
+    position: absolute;
+    /* z-index: 10000; */
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background: #91a8ac;
+    background:linear-gradient(-55deg, #91a8ac 29%, #6f7779 29.1%, #6f7779 68%, #91a8ac 68.1%);
+
+}
+
+#adp1, #adp2 {
+    
+    font-weight: bold;  
+    display: flex;
+    justify-content: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(39, 20, 20); 
+    background-color: white ;
+}
+
+#adp1 {
+    transform: translateY(-14px);
+    font-size: large;
+    margin-top: 15px;
+    text-transform: capitalize;
+
+}
+
+#adp2 {
+    transform: translateY(-14px);
+    font-size: x-large;
+    text-transform: uppercase;  
+}
+
+img {
+    width: 170px;
+    height: 140px;
+    margin-top: 10px;
+    margin-left: 90px;
+}
+
+/*//////////////////////////////
+////////// THE DATA ////////////
+//////////////////////////////*/
+.pwcCards {
+    display: flex;
+    justify-content: center;
+}
+
+.pwccard {
+    background-color: white;
+    width: 250px; /* changed the height and width of the cards*/
+    height: 175px;
+    margin: 8px; /*adds space in between the cards by adding white space outside of each card */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+
+}
+
+.powerCard {
+    background-color: orange;
+}
+
+.waterCard {
+    background-color: lightblue;
+}
+
+.costCard {
+    background-color: red;
+}
+
+#totalPowerCard, #totalWaterCard, #totalCostCard {
+    width: 300px;
+    height: 250px;
+}
+
+.pwcLabel {
+    margin: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pwcData{
+    margin: 15px;
+    font-size: 50px;
+    display: flex; /*you have to use display flex in order to use justify content center */
+    justify-content: center;
+}
+
+#totalPowerCard .pwcLabel, #totalWaterCard .pwcLabel, #totalCostCard .pwcLabel {
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+#totalPowerCard .pwcData, #totalWaterCard .pwcData, #totalCostCard .pwcData {
+    font-size: 65px;
+    margin: 30px;
+}
+
+
+#total {
+    padding-top: 75px;
+    background-color: blueviolet;
+    padding-bottom: 25px;
+}
+
+
+.totalCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
